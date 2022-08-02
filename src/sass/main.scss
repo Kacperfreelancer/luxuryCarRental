@@ -28,12 +28,14 @@ img {
   position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 1;
+  z-index: 2;
+  cursor: pointer;
 
   &__icon {
     width: 30px;
     height: 2px;
     background-color: $primary-black;
+    transition: 1s background-color;
 
     &::before,
     &::after {
@@ -41,20 +43,79 @@ img {
       display: block;
       height: 2px;
       background-color: $primary-black;
+      transition: 1s width, 1s background-color;
     }
 
     &::after {
       width: 20px;
-      transform: translateY(6px);
+      transform: translateY(7px);
     }
 
     &::before {
       width: 12px;
-      transform: translateY(16px);
+      transform: translateY(17px);
     }
 
+    &.active {
+      background-color: $pure-white;
+
+      &::before,
+      &::after {
+        background-color: $pure-white;
+        width: 30px;
+      }
+    }
   }
 }
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 70%;
+  z-index: 1;
+  background-image: $black-gradient;
+  transition: 1s left;
+
+  &__menu {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    padding: 2em;
+
+    & ul {
+      list-style: none;
+
+      & li {
+        margin-bottom: 3em;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 3px;
+          height: 10%;
+          background-color: $primary-orange;
+        }
+
+        & a {
+          color: $pure-white;
+          text-decoration: none;
+          font-size: 2.5rem;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &.active {
+    left: 0;
+  }
+}
+
 
 
 .header {
