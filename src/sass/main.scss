@@ -22,6 +22,41 @@ img {
   width: 100%;
 }
 
+
+.burger {
+  padding: 2em;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+
+  &__icon {
+    width: 30px;
+    height: 2px;
+    background-color: $primary-black;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: $primary-black;
+    }
+
+    &::after {
+      width: 20px;
+      transform: translateY(6px);
+    }
+
+    &::before {
+      width: 12px;
+      transform: translateY(16px);
+    }
+
+  }
+}
+
+
 .header {
   position: relative;
   height: 100vh;
