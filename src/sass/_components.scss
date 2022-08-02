@@ -16,3 +16,19 @@
   z-index: -10;
   cursor: default;
 }
+
+.special-color {
+  color: $primary-orange
+}
+
+.casual-button {
+  padding: .7em 2.2em;
+  border: 1px solid $primary-orange;
+  border-radius: 2px;
+  color: $pure-white;
+  font-family: "roboto", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: transparent;
+}

@@ -18,7 +18,49 @@ body {
   background-color: $primary-black;
 }
 
-section {
+img {
+  width: 100%;
+}
+
+.header {
   position: relative;
-  min-height: 40vh;
+  height: 100vh;
+
+  & img {
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 2em;
+    color: $pure-white;
+
+    &--title {
+      font-size: 5.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    &--description {
+      font-size: 1.6rem;
+    }
+
+    &--price {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: $grey;
+
+      & span {
+        font-size: 1.4rem;
+      }
+    }
+
+    &--button {
+      margin-top: 1em;
+    }
+  }
 }
