@@ -27,6 +27,6 @@ const handleMenu = () => {
     item.addEventListener('click', handleMenu)
   })
 }
-
+handleBurgerColor()
 window.addEventListener('orientationchange', handleBurgerColor)
 burgerBtn.addEventListener('click', handleMenu);
