@@ -36,37 +36,23 @@ img {
     width: 30px;
     height: 2px;
     background-color: $primary-black;
-    transition: 1s background-color;
+    transition: 1s background-color, 1s width;
+    margin-bottom: 6px;
 
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      height: 2px;
-      background-color: $primary-black;
-      transition: 1s width, 1s background-color;
+    &:nth-child(2) {
+      width: 60%;
     }
 
-    &::after {
-      width: 20px;
-      transform: translateY(7px);
-    }
-
-    &::before {
-      width: 12px;
-      transform: translateY(17px);
+    &:nth-child(3) {
+      width: 30%;
     }
 
     &.active {
-      background-color: $pure-white;
-
-      &::before,
-      &::after {
-        background-color: $pure-white;
-        width: 30px;
-      }
+      background-color: $pure-white !important;
+      width: 30px;
     }
   }
+
 }
 
 .nav-mobile {
