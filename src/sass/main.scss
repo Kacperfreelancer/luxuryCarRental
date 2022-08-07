@@ -107,6 +107,7 @@ img {
     object-fit: cover;
     grid-column-start: 1;
     grid-column-end: -1;
+    width: 100%;
   }
 
   &__text {
@@ -143,6 +144,45 @@ img {
   }
 }
 
+.rentals {
+  position: relative;
+
+  &__box {
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 2em 1em;
+
+      &--title {
+        font-size: 3rem;
+        color: $pure-white;
+      }
+
+      &--price {
+        color: $grey;
+        font-size: 1.6rem;
+      }
+
+      & a {
+        display: block;
+        padding: 2em;
+        font-size: 1.8rem;
+        color: $primary-orange;
+        text-decoration: none;
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+
+// =========================
+// Media
+
 @media (min-width:576px) {
   .header {
     display: grid;
@@ -151,8 +191,9 @@ img {
     &__img {
       height: 100vh;
       object-fit: cover;
-      grid-column-start: 6;
+      grid-column-start: 4;
       grid-column-end: -1;
+      content: url("../img/mercedes-gle-header-v2.jpg");
     }
 
     &__text {
@@ -179,6 +220,24 @@ img {
   }
 }
 
+@media(min-width:768px) {
+
+  .rentals {
+    margin-top: 200px;
+
+    &__box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &-card {
+        width: 49%;
+      }
+    }
+  }
+}
+
 @media (min-width:992px) {
   .header {
     display: grid;
@@ -187,16 +246,24 @@ img {
     height: 70vh;
 
     &__img {
-      // object-fit: cover;
+      object-fit: cover;
       grid-column-start: 5;
       grid-column-end: -1;
-      height: 90vh;
+      height: 80vh;
     }
 
     &__text {
       top: 40%;
       grid-column-start: 2;
       grid-column-end: 7;
+    }
+  }
+
+  .rentals {
+    &__box {
+      &-card {
+        width: 30%;
+      }
     }
   }
 }
