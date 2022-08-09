@@ -16,6 +16,7 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   background-color: $primary-black;
+  color: $pure-white;
 }
 
 img {
@@ -254,6 +255,49 @@ img {
   }
 }
 
+
+.about {
+
+  &__title {
+    padding: 1em;
+    font-size: 5rem;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 20px;
+      display: block;
+      width: 45px;
+      height: 90px;
+      background-color: $primary-orange;
+      z-index: -1;
+    }
+  }
+
+  & img {
+    margin-bottom: 1em;
+
+    &:nth-child(3) {
+      transform: scale(0.9);
+    }
+  }
+
+  &__text {
+    padding: 2em;
+    font-size: 1.6rem;
+
+    &-heading {
+      margin-bottom: 1em;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+
+
+}
 
 // =========================
 // Media
