@@ -297,8 +297,42 @@ img {
       font-weight: 900;
     }
   }
+}
 
+.newsletter {
+  padding: 3em;
+  background-color: $primary-orange;
+  color: $primary-black;
 
+  &-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1em;
+    }
+
+    & input {
+      width: 100%;
+      padding: 1em;
+      background-color: $primary-black;
+      border-radius: 3px;
+      border: none;
+      color: $pure-white;
+      margin-bottom: 2em;
+    }
+
+    &__btn {
+      background-color: $primary-black;
+      color: $primary-orange
+    }
+  }
 }
 
 // =========================
@@ -371,6 +405,18 @@ img {
       grid-row-start: 1;
       grid-row-end: 1;
       font-size: 6rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        right: -250px;
+        display: block;
+        width: 100px;
+        height: 290px;
+        background-color: $primary-orange;
+        z-index: -1;
+      }
 
     }
 
